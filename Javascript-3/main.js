@@ -1,3 +1,9 @@
+// Task 1
+// function weight(kutle, uzunluq) {
+//   let cem = (kutle / (uzunluq ** 2));
+//   return cem;
+// }
+// console.log(weight(100, 200))
 // Task 2
 // function allArrTotal(arr) {
 //   let zero = 0;
