@@ -78,20 +78,9 @@
 // }
 // console.log( ed(5,10) )
 // Task 9
-// function control(a, b, c) {
-//   if ((b > a && b < c) || (b < a && b > c)) {
-//     return `${b} ${a} ${c}`
-//   }
-// }
-// console.log(control(45, 30, 15));
-
-function ed(a, b, c) {
-  let r;
-  if (a > b < c || a < b > c) {
-    r = `${b} ${a} ${c}`
-  } else if (b > a < c || b) {
-
+function control(a, b, c) {
+  if ((b > a && b < c) || (b < a && b > c)) {
+    return `${b} ${a} ${c}`
   }
 }
-
-ed(15, 20, 25);
+console.log(control(45, 30, 15));
