@@ -62,74 +62,68 @@ let books = [
 ];
 
 // Fiction genre'ine sahib olan kitablarin ortalama seyfe sayini hesablayin.
-const genre = (arr) => {
-  const reduce = arr.map((item) => {
-    return item.genre === "Fiction" ?  item : ""
-  })
-  // console.log(reduce);
-  return reduce
-}
-// genre(books);
-console.log(genre(books))
-
-
-
-
+// Task 1
+// const genres = (arr) => {
+//   const reduce = arr.filter((item) => {
+//     if( item.genre === "Fiction" ) {
+//       return item
+//     }
+//   })
+//   return reduce
+// }
+// console.log(genres(books))
+// Task 1 01
+// const calcBooks = () => {
+//   const filter = books.filter((item) => item.genre === "Fiction" ? item : "" ).map(item=> item)
+//   return filter
+// }
+// console.log( calcBooks() )
 
 
 // author adinda  "J" herfi olan kitabları yazin.
 // const booksLetter = () => {
-
+//   const  result = books.filter((book) => book.author.includes("J"))
+//   return result;
 // }
-
-
-
-
-
-
+// console.log(booksLetter())
 
 
 
 // Mystery genre'ine sahib olan kitablarin authorlarini elifba sirasina gore yazin.
+// const  mysteryAuthor = () => {
+//   const  filteredBooks = books.filter((book)=> book.genre ==="Mystery")
+//   return filteredBooks
+// }
 
-
-
-
-
-
-
-
-
+// console.log(mysteryAuthor())
 
 
 // Classic genre'ine sahip olub bestseller olmayan kitaplarin sayini tapin.
+// const bestssellerFalse = () => {
+//   const filterBest = books.filter(book => !book.bestseller);
+//   return filterBest.length;
+// }
 
-
-
-
-
+// console.log(bestssellerFalse());
 
 
 // Fiction olan kitablarin ad ve authordan ibaret teze objectden ibaret arr yaradin
 
+// const authorBooks = () => {
+//   const filteredBooks = books.filter((book) => book.genre === "Mystery").map(item => ({ author: item.author, bookName: item.bookName }));
+//   return filteredBooks;
+// }
 
-
-
-
-
-
-
+// console.log(authorBooks())
 
 
 
 // Mueyyen bir kitabı array'den silin.
-// const findBooks = (arr) => {
-  // let z = []
-//   const finds = arr.findIndex((item) => item.author === "Arthur Conan Doyle")
-  
-//   if (finds !== -1) {
-//     arr.splice(finds, 4)
-//     return arr
+// const removeBook = (arr, item) => {
+//   let index = arr.indexOf(item);
+//   if (index > -1) {
+//     arr.splice(index, 1);
 //   }
 // }
-// console.log(findBooks(books))
+// removeBook(books, books[3])
+// console.log(books)
