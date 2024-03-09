@@ -62,27 +62,74 @@ let books = [
 ];
 
 // Fiction genre'ine sahib olan kitablarin ortalama seyfe sayini hesablayin.
-// const genre = (arr) => {
+const genre = (arr) => {
+  const reduce = arr.map((item) => {
+    return item.genre === "Fiction" ?  item : ""
+  })
+  // console.log(reduce);
+  return reduce
+}
+// genre(books);
+console.log(genre(books))
 
-// }
+
+
+
+
+
 // author adinda  "J" herfi olan kitabları yazin.
 // const booksLetter = () => {
 
 // }
+
+
+
+
+
+
+
+
+
 // Mystery genre'ine sahib olan kitablarin authorlarini elifba sirasina gore yazin.
+
+
+
+
+
+
+
+
+
+
 
 // Classic genre'ine sahip olub bestseller olmayan kitaplarin sayini tapin.
 
+
+
+
+
+
+
 // Fiction olan kitablarin ad ve authordan ibaret teze objectden ibaret arr yaradin
+
+
+
+
+
+
+
+
+
+
 
 // Mueyyen bir kitabı array'den silin.
 // const findBooks = (arr) => {
-//   // let z = []
+  // let z = []
 //   const finds = arr.findIndex((item) => item.author === "Arthur Conan Doyle")
+  
 //   if (finds !== -1) {
-//     arr.splice(finds, 1)
+//     arr.splice(finds, 4)
 //     return arr
 //   }
 // }
-
 // console.log(findBooks(books))
