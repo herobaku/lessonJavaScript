@@ -92,8 +92,13 @@ const athletes = [
 ];
 
 // Task 01
+// const record = (arr) => {
+//   const filtered = arr.filter(item => item.hasWorldRecord)
+//   return filtered;
+// }
+// console.log(record(athletes))
 // const worldchamions = athletes.map((item) => {
-let arr = [];
+// let arr = [];
 //   if (item.hasWorldRecord) {
 //     arr.push(item)
 //     return arr
@@ -110,13 +115,24 @@ let arr = [];
 // console.log(arr)
 /* ---------------------------- */
 // Task 02
-// const medals = athletes.filter((item) => {
-//   if (item.totalMedals > 10) {
-//     return item.totalMedals
-//   }
-// })
-// console.log(medals);
+// const females = (arr) => {
+//   const filtered = arr.filter((item) => item.hasWorldRecord && item.gender === "Female");
+//   const mapping = filtered.map((item) => item.name)
+//   console.log(mapping)
+// }
+// females(athletes)
+// const med = (arr) => {
+//   const medals = arr.filter((item) => (item.totalMedals > 10))
+//   return medals
+// }
+// console.log(med(athletes))
 // Task 03
+// 3. Atletlərin adlarından ibarət array yaradın.
+// const athlet = (arr) => {
+//   const athletFilter = arr.filter(item => item.name)
+//   return athletFilter;
+// }
+// console.log(athlet(athletes))
 // const names = athletes.map((item) => {
 //   return item.name
 // })
@@ -175,8 +191,7 @@ let arr = [];
 // Task 09
 // function year() {
 //   athletes.forEach(item => {
-//     if (item.gender === "Male" && item.age >= 30 && item.age <= 35) {
-//       console.log(item.age / item.gender.length)
+//     if (item.gender === "Male" ) {
 //     }
 //   })
 // }
