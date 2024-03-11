@@ -1,0 +1,78 @@
+a {
+  text-decoration: none;
+}
+
+.darkButton {
+  appearance: none;
+}
+
+.group-dark::selection {
+  background: transparent;
+}
+
+.group-dark {
+  max-width: 80px;
+  width: 100%;
+  height: 40px;
+  background: #f9f9f9;
+  border-radius: 30px;
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.group-dark::before {
+  content: "";
+  transition: all .5s;
+  position: absolute;
+  inset: 1px;
+  transform: translateY(-1px);
+  width: 50%;
+  height: 100%;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.bx-sun:before {
+  left: 10%;
+  transform: translateY(-50%) translateX(0%);
+}
+
+.bx-sun:before,
+.bxs-moon:before {
+  top: 50%;
+  position: absolute;
+  font-size: 1.7rem;
+}
+
+.bxs-moon:before {
+  right: 5%;
+  transform: translateY(-50%) translateX(0%);
+}
+
+.group-dark.active::before {
+  transform: translateX(100%) translateY(1px);
+  inset: -1px;
+}
+
+footer * {
+  color: #111;
+}
+
+footer.active * {
+  color: #fff !important;
+}
+
+.card {
+  box-shadow: 0 0 1px 3px #000;
+  overflow: hidden;
+  color: #fff;
+  background: #000;
+}
+
+.card.active {
+  box-shadow: 0 0 1px 3px #fff;
+  color: #111;
+  background: #fff;
+}
