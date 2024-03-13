@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    button {
+      padding: 8px 30px;
+      border: 1px solid #eee;
+      min-width: 200px;
+      border-radius: 20px 3px 20px 3px;
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #eee;
+      background: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <button>Generate</button>
+  <script>
+    const button = document.querySelector("button")
+    const getRandomColor = () => {
+      return Math.floor(Math.random() * 256)
+    }
+    button.addEventListener("click", () => {
+      let body = document.body
+      const total = `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`
+      body.style.backgroundColor = total
+    })
+  </script>
+</body>
+
+</html>
