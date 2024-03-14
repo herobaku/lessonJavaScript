@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const countries = [
+      "Pakistan",
+      "India",
+      "Tajikistan",
+      "Russia",
+      "Kazakhstan",
+      "Greece",
+      "Turkmenistan",
+      "Turkey",
+      "Kyrgyzstan",
+      "Ukraine",
+      "Uzbekistan",
+    ];
+
+    const sentence = "In the end, we only regret the chances we didn't take.";
+
+    const books = [
+      "To Kill a Mockingbird",
+      "1984",
+      "The Great Gatsby",
+      "Pride and Prejudice",
+      "The Catcher in the Rye",
+      "The Lord of the Rings",
+      "Animal Farm",
+      "Brave New World",
+      "The Grapes of Wrath",
+      "The Hobbit",
+      "One Hundred Years of Solitude",
+      "The Catcher in the Rye",
+      "Catch-22",
+      "The Brothers Karamazov",
+      "Moby Dick",
+      "The Odyssey",
+      "Frankenstein",
+      "Alice's Adventures in Wonderland",
+      "The Picture of Dorian Gray",
+      "War and Peace",
+    ];
+    // 1. Countries array-ində sonu 'stan' ilə bitən ölkələrdən array yaratmaq
+    // const endString = (arr) => {
+    //   const filter = countries.filter(item => item.slice(-4) === "stan" ? item : false )
+    //   return filter
+    // }
+    // const endString = (arr) => {
+    //   const filter = countries.filter(item => item.endsWith("stan") ? item : false )
+    //   return filter
+    // }
+    // console.log(endString(countries))
+
+    // Sentence dəyişənini tərsinə yazmaq.
+    // const reverseString = (arr) => arr.split(" ").reverse().join(" ");
+    // console.log(reverseString(sentence));
+
+    // Books array-ini əlifba sırası ilə yazılmış array-ə çevirmək
+    // const alphabet = (arr) => arr.sort()
+    // console.table(alphabet(books));
+
+    // Books array-ində adı ən uzun olan kitabı tapmaq.
+    // const wordLength = (arr) => arr.reduce((a, b) => a.length >= b.length ? a : b)
+    // console.log(wordLength(books));
+
+  </script>
+</body>
+
+</html>

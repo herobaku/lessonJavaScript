@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="state-submit">
+      <div class="icon-star">
+        <i class="star"></i>
+      </div>
+      <h1 class="title">How did we do?</h1>
+      <p class="subtitle">Please let us know how we did with your support request. All feedback is appreciated to help
+        us
+        improve our offering!</p>
+      <form>
+        <div class="rating">
+          <div class="rating-item">
+            <label for="one">1</label>
+            <input type="radio" id="one" name="rating">
+          </div>
+          <div class="rating-item">
+            <label for="two">2</label>
+            <input type="radio" id="two" name="rating">
+          </div>
+          <div class="rating-item">
+            <label for="three">3</label>
+            <input type="radio" id="three" name="rating">
+          </div>
+          <div class="rating-item">
+            <label for="four">4</label>
+            <input type="radio" id="four" name="rating">
+          </div>
+          <div class="rating-item">
+            <label for="five">5</label>
+            <input type="radio" id="five" name="rating">
+          </div>
+        </div>
+        <button class="submit">Submit</button>
+      </form>
+    </div>
+    <div class="state-thanks">
+      <img src="./images/illustration-thank-you.svg" alt="thank-you" />
+      <div class="block-select">
+        <h4>You selected <span id="rating"></span> out of 5</h4>
+      </div>
+      <h2 class="title">Thank you!</h2>
+      <p class="subtitle">We appreciate you taking the time to give a rating. If you ever need more support, don’t
+        hesitate to get in touch!</p>
+    </div>
+  </div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
