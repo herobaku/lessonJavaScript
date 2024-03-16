@@ -1,29 +1,39 @@
-const submit = document.querySelector("form");
+const submit = document.querySelector(".submit");
 const stateSubmit = document.querySelector(".state-submit");
 const stateThanks = document.querySelector(".state-thanks");
 const ratingValue = document.querySelector("#rating");
 const rating = document.querySelectorAll(".rating-item");
 
-let rate = 0
+let activeItemFound = false;
 
-submit.addEventListener("submit", (e) => {
+submit.addEventListener("click", (e) => {
   e.preventDefault();
-  stateSubmit.style.display = "none"
-  stateThanks.style.display = "block"
+  rating.forEach(item => {
+    if (item.classList.contains("active")) {
+      stateSubmit.style.display = "none"
+      stateThanks.style.display = "block"
+      ratingValue.innerHTML = item.textContent
+      activeItemFound = true
+    }
+  })
+  if (!activeItemFound) {
+    const al = alert("Select rating")
+    return al
+  }
 })
 
-// const ratingNext = () => {
-//   rating.forEach((element, index) => {
-//     element.addEventListener("click", (e) => {
-//       const i = index + 1
-//       if (e.target.checked) {
-//         element.classList.add("active")
-//         ratingValue.innerHTML = i;
-//       } else {
-//         element.classList.remove("active")
-//       }
-//     })
-//   });
-// }
+const clickEl = () => {
+  const activateButton = (button) => {
+    rating.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    activeItemFound = true
+  };
 
-ratingNext();
+  rating.forEach(button => {
+    button.addEventListener('click', () => {
+      activateButton(button);
+    });
+  });
+}
+
+clickEl()

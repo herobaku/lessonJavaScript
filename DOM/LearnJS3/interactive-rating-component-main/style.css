@@ -18,8 +18,9 @@
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 15px;
   text-align: center;
+  color: #fff;
 }
 
 .attribution a {
@@ -44,6 +45,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100dvh;
+  flex-direction: column;
+  gap: 50px;
 }
 
 ul {
@@ -95,31 +98,23 @@ p.subtitle {
   column-gap: 15px;
 }
 
+.rating-item::selection {
+  color: #fff
+}
+
 .rating-item {
+  cursor: pointer;
   background: #000;
-  position: relative;
   width: 100%;
   height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+  color: #fff;
 
   &:hover {
     background: var(--orange-color);
-  }
-
-  & label {
-    pointer-events: none;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  & input {
-    appearance: none;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
   }
 }
 
@@ -127,7 +122,7 @@ p.subtitle {
   background: var(--light-grey-color);
 }
 
-.rating-item.active span {
+.rating-item.active {
   color: var(--white-color);
 }
 
@@ -171,4 +166,10 @@ h2.title {
   letter-spacing: 0;
   word-spacing: 0;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    width: 95%;
+  }
 }
