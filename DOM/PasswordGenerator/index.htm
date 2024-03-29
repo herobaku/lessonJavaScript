@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="password-top">
+      <h1>Password Generator</h1>
+      <div class="input-field">
+        <input type="text" class="generate" id="generate" disabled placeholder="PTx1f5DaFX">
+        <span class="switch">
+          <i class='bx bx-copy copy'></i>
+        </span>
+      </div>
+    </div>
+    <div class="password-bottom">
+      <form class="form">
+        <div class="input-text">
+          <h4>Character length</h4>
+          <span id="value">0</span>
+        </div>
+        <div class="input-range">
+          <input type="range" class="range" id="range" value="6" min="6" max="20">
+        </div>
+        <div class="input-check-group">
+          <div class="input-check">
+            <label for="upper">Include Uppercase Letters</label>
+            <input type="checkbox" name="upper" id="upper">
+          </div>
+          <div class="input-check">
+            <label for="lower">Include Lowercase Letters</label>
+            <input type="checkbox" name="lower" id="lower">
+          </div>
+          <div class="input-check">
+            <label for="number">Include Numbers</label>
+            <input type="checkbox" name="number" id="number">
+          </div>
+          <div class="input-check">
+            <label for="symbol">Include Sybmbols</label>
+            <input type="checkbox" name="symbol" id="symbol">
+          </div>
+        </div>
+        <button class="btn">
+          <span>Generate</span>
+          <i class='bx bx-right-arrow-alt'></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</body>
+
+</html>
