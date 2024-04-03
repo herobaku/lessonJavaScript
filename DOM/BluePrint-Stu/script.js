@@ -82,7 +82,7 @@ const data = [
     sizes: ["xs", "s", "m", "l", "xl"],
   },
   {
-    id: 8,
+    id: 9,
     name: "high-neck jumper",
     image:
       "https://static.bershka.net/4/photos2/2023/I/0/2/p/7542/693/612/a66a6267efae2b65e5da3c78d27b60ad-7542693612_2_4_0.jpg?cropfixwidth=2052&imwidth=750&impolicy=bershka-crop-fix-width-itxmedium&imformat=chrome",
@@ -92,7 +92,7 @@ const data = [
     sizes: ["xs", "s", "m", "l", "xl"],
   },
   {
-    id: 9,
+    id: 10,
     name: "polo sweater",
     image:
       "https://static.bershka.net/4/photos2/2023/I/0/2/p/7949/596/515/b3c4977f28bf813596a48504f3f4f46c-7949596515_2_4_0.jpg?cropfixwidth=2052&imwidth=750&impolicy=bershka-crop-fix-width-itxmedium&imformat=chrome",
@@ -126,6 +126,7 @@ class Shops {
     this.products.forEach(product => {
       let div = document.createElement("div")
       div.classList = "product__item"
+
       div.innerHTML += `
       <a href="productPage/index.html">
       <div class="product__image">
@@ -138,8 +139,8 @@ class Shops {
         </div>
         <h1 class="product__price">${product.price} AZN</h1>
       </div>
-    </a>`
-        ;
+    </a>`;
+
       products.append(div)
 
       div.addEventListener("click", () => {

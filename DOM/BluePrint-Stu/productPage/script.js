@@ -80,7 +80,7 @@ const data = [
     sizes: ["xs", "s", "m", "l", "xl"],
   },
   {
-    id: 8,
+    id: 9,
     name: "high-neck jumper",
     image:
       "https://static.bershka.net/4/photos2/2023/I/0/2/p/7542/693/612/a66a6267efae2b65e5da3c78d27b60ad-7542693612_2_4_0.jpg?cropfixwidth=2052&imwidth=750&impolicy=bershka-crop-fix-width-itxmedium&imformat=chrome",
@@ -90,7 +90,7 @@ const data = [
     sizes: ["xs", "s", "m", "l", "xl"],
   },
   {
-    id: 9,
+    id: 10,
     name: "polo sweater",
     image:
       "https://static.bershka.net/4/photos2/2023/I/0/2/p/7949/596/515/b3c4977f28bf813596a48504f3f4f46c-7949596515_2_4_0.jpg?cropfixwidth=2052&imwidth=750&impolicy=bershka-crop-fix-width-itxmedium&imformat=chrome",
@@ -119,16 +119,19 @@ class Product {
     this.counter = 1;
     this.fetchdataLocale();
     this.displayProduct();
-    this.addToCart = [];
+    this.addCart = [];
 
     increaseBtn.addEventListener("click", this.increaseButton.bind(this));
     decreaseBtn.addEventListener("click", this.decreaseButton.bind(this));
+
+    addToCartBtn.addEventListener("click", this.AddToCard.bind(this))
+
+    this.getLocaleAddToCard();
   }
 
   fetchdataLocale() {
     const productId = JSON.parse(localStorage.getItem("products"))
     this.product = data.find(product => product.id === productId)
-    console.log(this.product)
   }
 
   decreaseButton() {
@@ -137,7 +140,13 @@ class Product {
   }
 
   increaseButton() {
-    counter.value = this.counter++
+    this.counter++
+    counter.value = this.counter;
+  }
+
+
+  getLocaleAddToCard() {
+    this.addCart = localStorage.getItem("card") ? JSON.parse(localStorage.getItem("card")) : []
   }
 
   displayProduct() {
@@ -146,6 +155,27 @@ class Product {
     productPrice.textContent = this.product.price + " AZN"
     productImage.src = this.product.image
     productColor.style.background = this.product.color
+  }
+
+  AddToCard() {
+    const existingProduct = this.addCart.find(product => product.id === this.product.id);
+    const existingProductIndex = this.addCart.findIndex(product => product.id === this.product.id);
+
+    if (!existingProduct) {
+      const newProduct = {
+        quantity: this.counter,
+        id: this.product.id
+      };
+      this.addCart.push(newProduct);
+    } else {
+      const addCartProduct = { ...existingProduct }
+      addCartProduct.quantity += addCartProduct.id
+      this.addCart.splice(existingProductIndex, 1, addCartProduct)
+    }
+
+    localStorage.setItem("card", JSON.stringify(this.addCart))
+
+    console.log(this.addCart)
   }
 }
 
