@@ -105,3 +105,4 @@ const data = [
 
 const cartItemList = document.querySelector(".cart__list");
 const cartTotalPrice = document.querySelector(".cart__total__price");
+
